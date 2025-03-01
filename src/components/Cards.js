@@ -105,6 +105,7 @@ const Cards = () => {
     JSON.parse(localStorage.getItem("comments")) || blogs.map(() => []);
   const [comments, setComments] = useState(initialComments);
   const [expandedCard, setExpandedCard] = useState(null);
+
   const handleCommentSubmit = (index, e) => {
     e.preventDefault();
     const newComment = {
@@ -179,14 +180,14 @@ const Cards = () => {
                   onClick={() => toggleExpanded(index)}
                   style={{
                     cursor: "pointer",
-                    border: "1px solid black",
+                    color: "gray",
                     padding: "5px",
                   }}
                 >
                   {expandedCard === index ? (
-                    <CommentsDisabledIcon sx={{ color: "Highlight" }} />
+                    <CommentsDisabledIcon sx={{ color: "gray" }} />
                   ) : (
-                    <CommentIcon sx={{ color: "Highlight" }} />
+                    <CommentIcon sx={{ color: "goldenrod" }} />
                   )}
                   Comments
                 </span>
@@ -228,24 +229,24 @@ const Cards = () => {
                   <>
                     <div>
                       {comments[index].map((comment, commentIndex) => (
-                        <div key={commentIndex} className="mb-2">
+                        <div key={commentIndex} className="mb-2 my-2">
                           <strong className="text-secondary">
                             {comment.name}
                           </strong>
                           <sup>
                             <VerifiedIcon
-                              sx={{ fontSize: "1rem", color: "blue" }}
+                              sx={{ fontSize: "1rem", color: "goldenrod" }}
                             />
                           </sup>
-                          <p>
-                            <h6>{comment.comment}</h6>
-                          </p>
+                          <h6>
+                            <p>{comment.comment}</p>
+                          </h6>
                           <sup>
                             <small className="text-muted">
                               {comment.date} at {comment.time}
                             </small>
                           </sup>
-                          <hr style={{ backgroundColor: "yellow" }} />
+                          <hr />
                         </div>
                       ))}
                     </div>
