@@ -14,7 +14,14 @@ const Header = () => {
           className="navbar-brand mx-3"
           style={{ fontSize: "1.5rem" }}
         >
-          <b>Tech-Blogger</b>
+          <b>
+            <img
+              src="./images/blog-icon.jpg"
+              alt=""
+              style={{ height: "3rem", width: "auto" }}
+            />{" "}
+            Tech-Blogger
+          </b>
         </a>
       </nav>
     </div>

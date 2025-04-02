@@ -270,7 +270,7 @@ const Cards = () => {
                         ></textarea>
                       </div>
                       <button type="submit" className="btn">
-                        <SendIcon sx={{ color: "gray" }} />
+                        <SendIcon sx={{ color: "goldenrod" }} />
                       </button>
                     </form>
                   </>
